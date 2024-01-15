@@ -1,0 +1,28 @@
+datalake_bucket: laika-datalake-data/warehouse
+base_bucket: sumz-laika-analytics-data-pegasus-dev/warehouse
+back_jdbc: jdbc:mysql://aurora8-read-replica-ohio.cluster-ro-coaalphkpo7q.us-east-2.rds.amazonaws.com:3306/laika?zeroDateTimeBehavior=round
+
+datalake_folders:
+  raw:
+    api: raw/api
+    clevertap: raw/clevertap
+    backend: raw/backend
+    netsuite: raw/netsuite
+    onedrive: raw/onedrive
+  intermediate:
+    api: intermediate/api
+    backend: intermediate/backend
+    netsuite: intermediate/netsuite
+  primary:
+    data: primary/data
+
+folders:
+  raw: raw
+  intermediate: intermediate
+  primary: primary
+  feature: feature
+  model_input: model_input
+  models: models
+  model_output: model_output
+  reporting: reporting
+  temp: temp
