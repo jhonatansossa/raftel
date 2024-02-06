@@ -1,0 +1,20 @@
+# spark with delta
+_spark_dataset_primary: &spark_dataset_primary
+  type: spark.SparkDataSet
+  file_format: parquet
+  save_args: &spark_default_save_args_primary
+    mode: error
+  layer: primary
+
+
+activities_percentage_matrix@spark:
+  filepath: "data/03_primary/activities_percentage_matrix"
+  <<: *spark_dataset_primary
+
+activities_duration@spark:
+  filepath: "data/03_primary/activities_duration"
+  <<: *spark_dataset_primary
+
+master_table@spark:
+  filepath: "data/03_primary/master_table"
+  <<: *spark_dataset_primary

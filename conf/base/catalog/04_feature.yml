@@ -1,0 +1,16 @@
+# spark with delta
+_spark_dataset_feature: &spark_dataset_feature
+  type: spark.SparkDataSet
+  file_format: parquet
+  save_args: &spark_default_save_args_feature
+    mode: error
+  layer: feature
+
+featured_master_table@spark:
+  filepath: "data/04_feature/featured_master_table"
+  <<: *spark_dataset_feature
+
+featured_master_table@pandas:
+  type: pandas.ParquetDataSet
+  filepath: "data/04_feature/featured_master_table"
+  layer: feature
