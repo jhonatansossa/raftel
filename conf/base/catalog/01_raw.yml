@@ -6,7 +6,35 @@ _spark_dataset: &spark_dataset
     mode: error
   layer: raw
 
-
 aras_a@spark:
-  filepath: "data/01_raw/aras/A"
+  filepath: "data/01_raw/loaded/aras/A"
+  <<: *spark_dataset
+
+aras_a_labels@spark:
+  filepath: "data/01_raw/loaded/aras/A_labels"
+  <<: *spark_dataset
+
+
+kyoto_2009_spring@spark:
+  filepath: "data/01_raw/loaded/casas/kyoto_2009_spring"
+  <<: *spark_dataset
+
+kyoto_2009_summer@spark:
+  filepath: "data/01_raw/loaded/casas/kyoto_2009_summer"
+  <<: *spark_dataset
+
+kyoto_2010@spark:
+  filepath: "data/01_raw/loaded/casas/kyoto_2010"
+  <<: *spark_dataset
+
+cairo@spark:
+  filepath: "data/01_raw/loaded/casas/cairo"
+  <<: *spark_dataset
+
+tulum_2009@spark:
+  filepath: "data/01_raw/loaded/casas/tulum_2009"
+  <<: *spark_dataset
+
+tulum_2010@spark:
+  filepath: "data/01_raw/loaded/casas/tulum_2010"
   <<: *spark_dataset

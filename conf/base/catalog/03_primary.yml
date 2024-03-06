@@ -6,7 +6,6 @@ _spark_dataset_primary: &spark_dataset_primary
     mode: error
   layer: primary
 
-
 activities_percentage_matrix@spark:
   filepath: "data/03_primary/activities_percentage_matrix"
   <<: *spark_dataset_primary
@@ -17,4 +16,8 @@ activities_duration@spark:
 
 master_table@spark:
   filepath: "data/03_primary/master_table"
+  <<: *spark_dataset_primary
+
+aras_A_encoded@spark:
+  filepath: "data/03_primary/aras_A_encoded"
   <<: *spark_dataset_primary

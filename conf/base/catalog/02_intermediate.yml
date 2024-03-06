@@ -1,0 +1,12 @@
+# spark with delta
+_spark_dataset_int: &spark_dataset_int
+  type: spark.SparkDataSet
+  file_format: parquet
+  save_args: &spark_default_save_args_int
+    mode: error
+  layer: raw
+
+
+aras_a_with_labels@spark:
+  filepath: "data/02_intermediate/aras/A"
+  <<: *spark_dataset_int

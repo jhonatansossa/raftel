@@ -14,3 +14,13 @@ featured_master_table@pandas:
   type: pandas.ParquetDataSet
   filepath: "data/04_feature/featured_master_table"
   layer: feature
+
+
+featured_aras_A@spark:
+  filepath: "data/04_feature/featured_aras_A"
+  <<: *spark_dataset_feature
+
+featured_aras_A@pandas:
+  type: pandas.ParquetDataSet
+  filepath: "data/04_feature/featured_aras_A"
+  layer: feature
