@@ -24,3 +24,12 @@ featured_aras_A@pandas:
   type: pandas.ParquetDataSet
   filepath: "data/04_feature/featured_aras_A"
   layer: feature
+
+featured_aras_A_2@spark:
+  filepath: "data/04_feature/featured_aras_A_2"
+  <<: *spark_dataset_feature
+
+featured_aras_A_2@pandas:
+  type: pandas.ParquetDataSet
+  filepath: "data/04_feature/featured_aras_A_2"
+  layer: feature

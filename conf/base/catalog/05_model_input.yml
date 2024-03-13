@@ -13,4 +13,20 @@ windowed_y_aras_A@pickle:
   layer: feature
   save_args:
     compress: lz4
+
+windowed_X_aras_A_2@pickle:
+  type: pickle.PickleDataSet
+  filepath: "data/05_model_input/windowed_X_aras_A_2.pkl.lz4"
+  backend: joblib
+  layer: feature
+  save_args:
+    compress: lz4
+
+windowed_y_aras_A_2@pickle:
+  type: pickle.PickleDataSet
+  filepath: "data/05_model_input/windowed_y_aras_A_2.pkl.lz4"
+  backend: joblib
+  layer: feature
+  save_args:
+    compress: lz4
   
