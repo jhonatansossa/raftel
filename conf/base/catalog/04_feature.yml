@@ -33,3 +33,12 @@ featured_aras_A_2@pandas:
   type: pandas.ParquetDataSet
   filepath: "data/04_feature/featured_aras_A_2"
   layer: feature
+
+featured_aras_A_3@spark:
+  filepath: "data/04_feature/featured_aras_A_3"
+  <<: *spark_dataset_feature
+
+featured_aras_A_3@pandas:
+  type: pandas.ParquetDataSet
+  filepath: "data/04_feature/featured_aras_A_3"
+  layer: feature
